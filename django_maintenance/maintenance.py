@@ -10,10 +10,14 @@ class DjangoMaintenance(object):
         """ Handle request. """
 
         # Read maintenace file
-        json_data = open(JSON_FILENAME, 'r')
-        data = json.load(json_data)
-        json_data.close()
+        try:
+            json_data = open(JSON_FILENAME, 'r')
+            data = json.load(json_data)
+            json_data.close()
+        except IOError:
+            # If settings file is missing default to None
+            data = None
 
         # Check if maintenance mode is on. Render template if it is.
-        if data['DJANGO_MAINTENANCE'] == 'on':
+        if data and data['DJANGO_MAINTENANCE'] == 'on':
             return render_to_response('django_maintenance/maintenance.html')
