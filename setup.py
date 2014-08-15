@@ -8,6 +8,6 @@ setup(
     version = version,
     download_url = 'https://github.com/mccricardo/django_maintenance',
     package_data={
-      'django_maintenance': ['*'],
+      'django_maintenance': ['templates/django_miantenance/*'],
    },
     )
