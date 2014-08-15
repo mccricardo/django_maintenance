@@ -7,6 +7,7 @@ setup(
     packages = find_packages(exclude=['test_app', 'django_maintenance_project']),
     version = version,
     download_url = 'https://github.com/mccricardo/django_maintenance',
-    include_package_data = True,
-    package_data = {'': ['README.md']},
+    package_data={
+      'django_maintenance': ['*'],
+   },
     )
