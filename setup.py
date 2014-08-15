@@ -8,4 +8,5 @@ setup(
     version = version,
     download_url = 'https://github.com/mccricardo/django_maintenance',
     include_package_data = True,
+    package_data = {'': ['README.md']},
     )
