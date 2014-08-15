@@ -1,0 +1,2 @@
+include README.md
+include django_maintenance/templates/django_maintenance/maintenance.html 

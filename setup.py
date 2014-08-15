@@ -9,5 +9,5 @@ setup(
     download_url = 'https://github.com/mccricardo/django_maintenance',
     package_data={
       '': ['*.json', '*.html'],
-   },
+   	},
     )
