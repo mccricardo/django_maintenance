@@ -1,8 +1,10 @@
 """ Middleware to handle maintenace. """
 from django.shortcuts import render_to_response
 import json
+import os
 
-JSON_FILENAME = 'django_maintenance/maintenance_settings.json'
+BASE_DIR = os.path.dirname(__file__)
+JSON_FILE = os.path.join(BASE_DIR, 'maintenance_settings.json')
 
 class DjangoMaintenance(object):
     """ Django Maintennece middleware. """
@@ -11,12 +13,13 @@ class DjangoMaintenance(object):
 
         # Read maintenace file
         try:
-            json_data = open(JSON_FILENAME, 'r')
+            json_data = open(JSON_FILE, 'r')
             data = json.load(json_data)
             json_data.close()
         except IOError:
             # If settings file is missing default to None
             data = None
+
 
         # Check if maintenance mode is on. Render template if it is.
         if data and data['DJANGO_MAINTENANCE'] == 'on':

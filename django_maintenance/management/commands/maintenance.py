@@ -2,8 +2,10 @@
 from django.core.management.base import BaseCommand
 import sys
 import json
+import os
 
-JSON_FILENAME = 'django_maintenance/maintenance_settings.json'
+BASE_DIR = os.path.dirname(__file__)
+JSON_FILE = os.path.join(BASE_DIR, '../../maintenance_settings.json')
 
 class Command(BaseCommand):
     """ Set maintenance status """
@@ -12,7 +14,7 @@ class Command(BaseCommand):
     	""" Set maintenance status """
     	json_data = json.dumps({"DJANGO_MAINTENANCE": option},
     							indent=4, separators=(',', ': '))
-    	json_file = open(JSON_FILENAME, 'w')
+    	json_file = open(JSON_FILE, 'w')
     	json_file.write(json_data)
     	json_file.close()
 
