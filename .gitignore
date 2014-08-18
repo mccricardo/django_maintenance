@@ -38,7 +38,3 @@ tramp
 Thumbs.db
 Desktop.ini
 
-# Temp or test files
-find_a_rep_project/find_a_rep/data/callback.txt
-callback.txt
-find_a_rep_project/callback.txt
