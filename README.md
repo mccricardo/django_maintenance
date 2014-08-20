@@ -22,7 +22,7 @@ Installation
     
     )
     
-  - Add the app:
+- Add the app:
     
     INSTALLED_APPS = (
     
