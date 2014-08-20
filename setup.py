@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 version = '0.1'
 
 setup(
-    name = 'django_maintenance',
+    name = 'django-under-maintenance',
     packages = find_packages(exclude=['test_app', 'django_maintenance_project']),
     version = version,
     description = 'Setting you site Under Maintenance.',
