@@ -38,8 +38,6 @@ Installation
     
     )
 
-**NOTE:** You can use the sample project in the [repository](https://github.com/mccricardo/django_maintenance ) as an example.
-
 Commands
 ===============
 
