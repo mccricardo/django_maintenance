@@ -7,36 +7,25 @@ Installation
 ===============
  - Install django-under-maintenance
  - Add to your middleware classes
-
-    MIDDLEWARE_CLASSES = (
-    
-    'django.middleware.common.CommonMiddleware',
-    
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    
-    'django.middleware.doc.XViewMiddleware',
-    
-    'django_maintenance.maintenance.DjangoMaintenance',
-    
-    )
+ 
+        MIDDLEWARE_CLASSES = ( 
+            'django.middleware.common.CommonMiddleware',    
+            'django.contrib.sessions.middleware.SessionMiddleware',    
+            'django.contrib.auth.middleware.AuthenticationMiddleware',    
+            'django.middleware.doc.XViewMiddleware', 
+            ....
+            'django_maintenance.maintenance.DjangoMaintenance',
+        )
     
 - Add the app:
     
-    INSTALLED_APPS = (
-    
-    'django.contrib.admin',
-    
-    'django.contrib.auth',
-    
-    'django.contrib.contenttypes',
-    
-    ...,
-
-    'django_maintenance',
-    
-    )
+        INSTALLED_APPS = (
+            'django.contrib.admin',
+            'django.contrib.auth',
+            'django.contrib.contenttypes',
+            ...,
+            'django_maintenance',
+        )
 
 Commands
 ===============
